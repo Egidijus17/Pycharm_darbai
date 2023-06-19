@@ -198,8 +198,8 @@
 # print("STOP!")
 # Egidijus = input("Kas cia eina?")
 # print("Gali praeiti", Egidijus)
-#
-# skaicius = float(input("Ivesk skaiciu: "))
+
+skaicius = float(input("Ivesk skaiciu: "))
 # sveikasSkaicius = int(input("Ivesk sveika skaiciu: "))
 # tekstas = input("Ivesk teksta: ")
 # print("skaičius =", skaicius)
