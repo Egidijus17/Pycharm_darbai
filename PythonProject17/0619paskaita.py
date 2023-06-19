@@ -2,10 +2,10 @@
 
 # 1.Parašykite programą, kuri atspausdina visus lyginius skaičius nuo 1 iki 10.
 
-# sarasas = range(1, 11)
-# for skaicius in sarasas:
-#     if skaicius %2 == 0:
-#         print(skaicius)
+sarasas = range(1, 11)
+for skaicius in sarasas:
+    if skaicius %2 == 0:
+        print(skaicius)
 
 #Modesto ats.
 # for skaicius in range (2, 11, 2) # nuo 2 skaiciaus printina kas antra. (pradinis, galutinis,zingsnis)
