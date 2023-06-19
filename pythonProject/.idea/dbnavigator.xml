@@ -1,0 +1,1751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DBNavigator.Project.DataEditorManager">
+    <record-view-column-sorting-type value="BY_INDEX" />
+    <value-preview-text-wrapping value="false" />
+    <value-preview-pinned value="false" />
+  </component>
+  <component name="DBNavigator.Project.DatabaseBrowserManager">
+    <autoscroll-to-editor value="false" />
+    <autoscroll-from-editor value="true" />
+    <show-object-properties value="true" />
+    <loaded-nodes />
+  </component>
+  <component name="DBNavigator.Project.DatabaseConsoleManager">
+    <connection id="907a6797-bdf2-4f22-8ae5-b2a649f94b4d">
+      <console name="Connection" type="STANDARD" schema="postgres" session="Main"><![CDATA[select * from users]]></console>
+      <console name="Connection 1" type="STANDARD" schema="public" session="Main"><![CDATA[select * from actor]]></console>
+    </connection>
+    <connection id="529fc643-8a96-4f0d-8fde-a2aa73da8c44">
+      <console name="Connection 1" type="STANDARD" schema="pagila" session="Main" />
+    </connection>
+    <connection id="32aaee02-eaa8-4752-9883-fc9cf6ec4ce6">
+      <console name="dellstore" type="STANDARD" schema="pagila" session="Main" />
+    </connection>
+    <connection id="1ba4088b-a1b6-4276-b1b5-071574f646cd">
+      <console name="pagila" type="STANDARD" schema="public" session="Main"><![CDATA[--insert into city (city_id, city, country_id) values (333333, 'Rokiskis', '14')
+--select * from  city where city = 'Rokiskis'
+--update city set city='Druskininkai' where city_id = 333333
+--select * from city where  city_id = 333333
+--delete from city where city_id = 333333
+--select * from city where city = 'Rokiskis'
+--insert into country (country_id, country) values (444444, 'Bangladesas')
+--update costumer set store_id = 13, first_name = 'Edita', last_name = 'Baneviciene', email = 'asdf@kjhdh.com', address_id = 16 where costumer_id =5
+--select first_name ||' '||last_name as vardas_pavarde from costumer
+
+--select round(123.432, -2) as suapvalinta
+
+--select  distinct city from city;
+--select count(*) as irasu_kiekis from city;
+
+--select count(email) as irasu_kiekis from customer
+--select lower(first_name) as vardas, lower(last_name)as pavarde from actor
+--select upper(first_name) as vardas, lower(last_name)as pavarde from actor;
+--select * from film order by length DESC;
+--select * from customer WHERE upper(last_name) = last_name;
+#3 nd
+--insert into customer_list (id, name, address, "zip code", phone, city, country, notes, sid) values ('123456', 'Kazys', '6 Rutu' ,'123' ,'8611', 'Telsiai', 'Estija', 'active', '1');
+--select * from film_list where category = 'Horror' order by price asc;
+--select distinct name from customer_list where country = 'Japan'
+--select round(123.452, -2) as suapvalinta
+--select round(123.452, 2) as suapvalinta 
+#4 pask
+--select count(actor_id), first_name from actor group by first_name;
+--select avg(amount) from payment;
+--select round(avg(amount), 4) from payment; 
+--select sum(amount) from payment;
+--select min(amount) from payment;
+--select max(amount) from payment;
+--select title, avg("length") from film group by title having avg(length) >68;
+--select coalesce (amount) from payment; grazina pirma ne tuscia eilute.
+
+6 paskaita
+
+--select desine.payment_id, kaire.customer_id
+--from payment desine
+--left join payment desine on desine.payment_id = kaire.costumer_id
+--
+--select * 
+--from customer kaire;
+--right join payment desine on desine.payment_id = kaire.customer_id;
+
+--select t1.customer_id, t2.payment_id
+--from customer t1
+--full outer join payment t2 on t1.customer_id = t2.customer_id;
+
+--select *
+--from customer t1
+--full outer join payment t2 on t1.customer_id = t2.customer_id;
+
+--select customer_id, store_id from customer
+--union all
+--select payment_id, rental_id from payment
+
+--select * from customer 
+
+--1 uzduotis-
+select * 
+from customer kaire
+right join payment desine on desine.payment_id = kaire.customer_id;]]></console>
+    </connection>
+    <connection id="f61c9ae3-1a7c-4ffe-a2fa-4bbf8459b732">
+      <console name="Connection 3" type="STANDARD" schema="postgres" session="Main" />
+      <console name="demo" type="STANDARD" schema="bookings" session="Main"><![CDATA[--1. uzduotis.Raskite miestus, kuriuose yra daugiau nei 1 oro uostas.
+
+--2.uzduotis. Raskite miestus, kuriuose yra bent vienas oro uostas, tačiau šių miestų pavadinimas neturi 
+--galūnėje raidžių "a" arba "e".
+--select distinct city from airports where airport_name not like 'a%', ???
+--3. uzduotis.Raskite skrydžių maršrutus, kuriuose skrydžių skaičius yra didžiausias.
+--4. Raskite miestus, kuriose yra bent vienas oro uostas, 
+--kurio pavadinimas prasideda raidėmis "C" ir turi 4 ar daugiau raidžių
+--Select distinct from airports where city like 'C%';
+--select * from airports;
+
+------------------------------------#9 pamoka-----------------------------------------------
+
+--select count(*) from ticket_flights;]]></console>
+    </connection>
+    <connection id="2a946236-b9e5-4948-9081-575093059441">
+      <console name="Connection 4" type="STANDARD" schema="postgres" session="Main" />
+    </connection>
+    <connection id="62323100-8322-4506-ba2c-5ceaf0eb9925">
+      <console name="Connection 5" type="STANDARD" schema="newdatabase" session="Main" />
+    </connection>
+    <connection id="2a711178-bbc6-40d2-be20-2c1e64eb3ef7">
+      <console name="Connection 6" type="STANDARD" schema="public" session="Main"><![CDATA[--select avg (age) from customers round (avg(amount) , 2);
+--select max(amount) from income;
+
+--select round(avg(age), 1) from customers; 1uzd
+--select round(MAX(income), 2) from customer; 2uzd negera
+ --select title, round(avg(price),1) from products group by title; 3 uzd
+--select distinct city from customers; 4uzd
+--select count(*) from customers where firstname like 'S%' or lastname like 'S%'; 5 uzd
+
+--select * from customers where age between 25 and 26;
+--select * from products where  category in(6, 3); tik 6 ir 3 kelios reiksmes.
+
+uzd
+
+--select * from customers where age between 25 and 35 and firstname like 'A%'; 1uzd
+--select  * from customers where lastname not like '%WEG%' and income > '80000' order by gender DESC; 2uzd
+3. uzduotis
+--select state, COUNT(*) AS klientų_skaičius
+--FROM customers
+--WHERE state IN ('AZ', 'WY', 'NH') AND age <= 40
+--GROUP BY state;
+4. uzduotis:
+--SELECT orderdate, SUM(netamount) AS užsakymų_suma
+--FROM orders
+--WHERE orderdate > '2004-01-05' AND orderdate < '2004-01-24' AND netamount > 100
+--GROUP BY orderdate;
+5 paskaita
+
+--creating Users table with one-to-one relationship
+
+--SUKURTI LENTELE Users-------------------------------------------------------------
+
+--CREATE TABLE Users(
+--userid SERIAL primary key,
+--username VARCHAR(100),
+--password VARCHAR(100));
+
+--creating profiles table with one-to-one relationship
+
+--SUKURTI LENTELE Profiliai--------------------------------------------------------
+
+--CREATE TABLE Profiles( 
+--profileid serial primary key,
+--userid int unique references Users(userid), 
+--(1, 'Jonas', 'Bangu', 'dd@aa.com')--full_name varchar(100), 
+--email varchar(100));
+
+
+--insert into Users(userid, username, password) values(1, 'test', 'testing')
+--insert into Profiles (profileid, userid, full_name, email) values (1, 1, 'Egidijus Vilkas', 'ggg@aaa.com');
+--select * from profiles;
+--select * from users;
+
+--SUKURTI LENTELES students ir course------------------------------------------------
+
+--create table students (studentid serial primary key, fullname varchar(100), email varchar(100))'
+--create table course (courseid serial primary key, studentid int unique references students(studentid), fullname varchar(100));
+
+--insert into students(studentid,fullname,email) values (1, 'Jonas','dd@aa.com');
+--insert into course(courseid, studentid, fullname) values (2, 1, 'Jonas'));
+--select * from students;
+--select * from course;
+
+--Stulpelio atnaujinimas-naujas stulpelio pridejimas-----------------------------------
+
+--PRIDETI, ATNAUJINTI PAPILDOMA STULPELI----------------------------------------------
+
+--alter table lenteles pav. add column naujo stulpelio pav. jei skaicius tada integer;
+
+--alter table stulpelio pavadinimas add column naujo stulpelio pavadinimas jei skaicius integer;
+
+--create table enrollments(
+--enrollmentid serial primary key, courseid int references course(courseid),
+--studentid int references students(studentid),
+--fullname varchar(100));
+--select * from enrollments;
+
+--insert into enrollments (enrollmentid,courseid, studentid, fullname) values (1, 2, 1, 'Jonas');
+--select * from enrollments;
+
+--select students.fullname, students.email from students;
+--select course.studentid from course;
+
+--select students.fullname from students join enrollments on students.studentid=enrollments.studentid
+--join course on enrollments.courseid = course.courseid; 
+
+6 paskaita
+--JOIN------------------------------------------------------------------------
+--select table1.stulpelis1, table2.stulpelis2 
+--from lentele1 table1
+--left join lentele2 t2 on table2.id = table1.id
+--
+--select desine.payment_id, kaire.customer_id
+--from payment desine
+--left join payment desine on desine.payment_id = kaire.costumer_id
+--
+--select * 
+--from customer kaire
+--left join payment desine on desine.payment_id = kaire.customer.id;
+
+--UZDUOTYS KLASEJE-------------------------------------------------------------------
+--1 uzduotis.Parašykite užklausą, kuri sujungia duomenis iš lentelių "klientai" (customers) ir "užsakymai" (orders) pagal 
+--"kliento_id"(customerid) ir atvaizduoja kliento vardą, pavardę ir užsakymo data.
+--
+--select customers.firstname,customers.lastname, orders.orderdate from customers customers
+--join orders orders on customers.customerid = orders.customerid;
+
+
+--2 uzduotis.Parašykite užklausą, kuri sujungia duomenis iš lentelių "produktai" (products) ir "užsakymai" (orders) pagal "produkto_id" 
+--ir atvaizduoja produkto pavadinimą, užsakymo numerį ir galutine suma.
+
+--pradziai isikelti lentele, nes nera sukurto bendro products ir orders, ikelimas cia, sito dar nesimokinom.
+
+-- ALTER TABLE orders
+-- ADD COLUMN prod_id int;
+
+-- ALTER TABLE orders
+-- ADD CONSTRAINT orders_product
+-- FOREIGN KEY (prod_id) REFERENCES products (prod_id);
+--
+--select products.title, orders.orderdate, orders.totalamount from products products
+--join orders orders on products.prod_id = orders.prod_id; 
+--
+--insert into orders (orderid, orderdate, netamount, tax, totalamount, prod_id) values (12001,'2014-05-06',
+--135, 13.6, 104.1, 13);
+
+--select * from orders where orderid = 12001;
+
+--3. uzduotis 
+
+--Parašykite užklausą, kuri sujungia duomenis iš lentelių "kategorijos" (categories) ir "produktai" (products) 
+--pagal "kategorijos_id" ir atvaizduoja kategorijos pavadinimą ir produkto pavadinimą. 
+--Gražinkite tik dešinės pusės rezultatus;
+
+--alter table categories 
+--add column category_id integer;
+--alter table categories add constraint categories_products foreign key (category_id) references (category_id);
+
+--alter table products
+--add column category_id integer;
+--alter table products add constraint categories_products foreign key (category_id) references (category_id);
+
+--select categories.categoryname, products.title from categories join products 
+--on products.category_id = products.category_id; 
+
+--insert into categories (category, category_id, categoryname) values (17, 1, 'Nature');
+--select * from categories;
+
+----pvz.:
+--select desine.payment_id, kaire.customer_id
+--from payment desine
+--left join payment desine on desine.payment_id = kaire.costumer_id
+
+--select desine.title, kaire.categoryname from categories; ne iki galo!!
+
+--5 pamokos ND.
+
+--1 Užduotis su foreign key:-----------------------------------------------------------------------------------------
+
+--[+] Sukurkite dvi lentelės: "klientai" ir "užsakymai".
+--[+] Lentelėje "užsakymai" panaudokite foreign key "kliento_id", kuris susiejamas su lentelės "klientai" pirminio rakto stulpeliu "kliento_id".
+--[+] Užpildykite abi lentelės duomenimis ir patikrinkite, ar foreign key veikia tinkamai, užtikrinant sąryšį tarp kliento ir užsakymo.
+
+--create table klientai (kliento_id serial primary key, vardas varchar(100), pavarde varchar(100));
+--create table uzsakymai( uzsakymo_id serial primary key, kliento_id integer references klientai(kliento_id),
+--uzsakymo_data date, suma numeric(10,));
+
+--insert into klientai (vardas, pavarde) values ('Jonas', 'Jonaitis'),('Petras', 'Petraitis'), ('Ona', 'Onaite');
+--select * from klientai;
+--insert into uzsakymai(kliento_id, uzsakymo_data, suma) values (1, '2023-05-01', 100),(2,'2023-05-02', 250),(3,'2023-05-03',50);
+--select * from uzsakymai;
+--select klientai.vardas, klientai.pavarde, uzsakymai.uzsakymo_data, uzsakymai.suma from klientai klientai 
+--join uzsakymai uzsakymai on klientai.kliento_id = uzsakymai.kliento_id;
+
+--2. Užduotis su many-to-many:-------------------------------------------------------------------------
+--[+] Sukurkite tris lenteles: "autoriai", "knygos" ir "knygos_autoriai".
+--[+] Lentelėje "knygos_autoriai" sukurkite du stulpelius: "autoriaus_id" ir "knygos_id", 
+--kurie yra foreign key, susiejantys "autoriai" ir "knygos" lentelės pirminius raktus.
+--[+] Užpildykite "autoriai" ir "knygos" lenteles duomenimis.
+--[+] Suformuokite užklausą, kuri gražintų visus autorių vardus ir susietų knygų pavadinimus, naudojant "knygos_autoriai" tarpinę lentelę.
+
+--create table autoriai(autoriai_id serial primary key, vardas varchar(50), pavarde varchar(50);
+--create  table  knygos(knygos_id serial primary key, pavadinimas varchar(50), metai integer);
+--create table knygos_autoriai
+--(autoriai_id integer references autoriai(autoriai_id)), 
+--knygos_id integer references knygos(knygos_id), primary key (autoriai_id, knygos_id));-----NEBAIGTAS!!!
+
+--CREATE TABLE knygos_autoriai (
+--    autoriaus_id integer REFERENCES autoriai(autoriaus_id),
+--    knygos_id integer REFERENCES knygos(knygos_id),
+--    PRIMARY KEY (autoriaus_id, knygos_id) -------------------------Modesto ats.
+
+--3. Užduotis su one-to-one:------------------------------------------------------------------
+--[+] Sukurkite duomenų bazės struktūrą, 
+--kurioje yra dvi lentelės "Darbuotojai" ir "Adresai". 
+--[+] Abi lentelės turės bendrą stulpelį "darbuotojo_id", 
+--kuris bus foreign key, atitinkantis "Darbuotojai" lentelės pagrindinį raktą. 
+--Taip užtikrins, kad kiekvienas darbuotojas turi tik vieną adresą.
+------------------ 
+--------------------------Sukuriame lentelę "Darbuotojai"------------------------------------------
+--create TABLE darbuotojai( darbuotojo_id serial primary key, vardas varchar(100), pavarde varchar(100));
+--select * from darbuotojai;
+--------------------------Sukuriame lentelę "Adresai" su foreign key sąryšiu į "Darbuotojai" lentelę-----------------
+--create table adresai(darbuotojo_id integer primary key references darbuotojai(darbuotojo_id), adresas varchar(100), miestas varchar(100));
+--insert into darbuotojai(vardas, pavarde) values ('Jonas', 'Jonaitis'), ('Petras', 'Petraitis'), ('Antanas', 'Aantanaitis')
+------------------------- Įvedame duomenis į "Adresai" lentelę---------------------------------------------
+-- insert into adresai (darbuotojo_id, adresas, miestas) VALUES
+--    (1, 'Adresas 1', 'Miestas 1'),
+--    (2, 'Adresas 2', 'Miestas 2'),
+--    (3, 'Adresas 3', 'Miestas 3');
+-------------------------Suformuojame užklausą su JOIN sąjunga, kuri sujungia "Darbuotojai" ir "Adresai" lentelių duomenis--------
+--select darbuotojai.vardas, darbuotojai.pavarde, adresai.adresas, adresai.miestas
+--from darbuotojai darbuotojai
+--join adresai adresai ON darbuotojai.darbuotojo_id = adresai.darbuotojo_id;
+
+----------------------------------4. Užduotis su One-to-one:--------------------------------------
+--[+] Sukurkite lentelę "Darbuotojai" ir lentelę "Darbo_Sutartys". 
+--[+] Pridėkite foreign key stulpelį "darbuotojo_id" į "Darbo_Sutartys" lentelę, 
+--kuris rodo į "Darbuotojai" lentelės stulpelį "darbuotojo_id". 
+--Tai užtikrins, kad kiekvienam darbuotojui bus tik viena darbo sutartis.
+
+-------------------------------------Sukuriame lentelę "Darbuotojai"---------------------
+--CREATE TABLE Darbuotojai (
+--    darbuotojo_id serial PRIMARY KEY,
+--    vardas varchar(100),
+--    pavarde varchar(100));
+------------------------------------- Sukuiame lentelę "Darbo_Sutartys" su foreign key sąryšiu į "Darbuotojai" lentelę--------------
+--CREATE TABLE Darbo_Sutartys (
+--    sutarties_id serial PRIMARY KEY,
+--    darbuotojo_id integer REFERENCES darbuotojai(darbuotojo_id),
+--    sutarties_data date,
+--    atlyginimas numeric(10, 2));
+--------------------------------------- Įvedame duomenis į "Darbuotojai" lentelę------------------------------------
+--INSERT INTO Darbuotojai (vardas, pavarde) VALUES
+--    ('Egidijus', 'Vilkas'),
+--    ('Povilas', 'Lape'),
+--    ('Kazimieras', 'Kiskis');
+--------------------------------------- Įvedame duomenis į "Darbo_Sutartys" lentelę-------------------------------
+--INSERT INTO Darbo_Sutartys (darbuotojo_id, sutarties_data, atlyginimas) VALUES
+--    (1, '2022-01-01', 1500.00),
+--    (2, '2022-02-01', 2000.00),
+--    (3, '2022-03-01', 1800.00);
+--------------------------- Suformuojame užklausą su JOIN sąjunga, kuri sujungia "Darbuotojai" ir "Darbo_Sutartys" lentelių duomenis--------
+--SELECT darbuotojai.vardas, darbuotojai.pavarde, Darbo_sutartys.sutarties_data, Darbo_sutartys.atlyginimas
+--FROM darbuotojai darbuotojai
+--JOIN Darbo_Sutartys Darbo_sutartys ON darbuotojai.darbuotojo_id = Darbo_sutartys.darbuotojo_id;
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--1.UZDUOTIS
+
+--[!] Sukurkite lenteles "Darbuotojai" ir "Atlyginimai" su foreign key.
+--[!] Parašykite užklausą su "RIGHT JOIN", kuri sujungia duomenis iš lentelių "Darbuotojai" ir "Atlyginimai" 
+--pagal "darbuotojo_id" ir atvaizduoja darbuotojo vardą ir atlyginimo sumą. 
+--Jei darbuotojas neturi atlyginimo įrašo, atlyginimo suma bus NULL.
+
+--create table Atlyginimai (Mokejimo_data date,darbuotojo_id integer references darbuotojai(darbuotojo_id), 
+--vardas varchar(100), pavarde varchar(100), atlyginimas numeric(10,2));
+
+--select * from Atlyginimai;
+--select * from darbuotojai;
+
+--insert into Atlyginimai(Mokejimo_data, darbuotojo_id, vardas, pavarde, atlyginimas) 
+--values ('2023-05-01', 1, 'Egidijus', 'Vilkas', 1550), 
+--('2023-05-01', 2, 'Petras', 'Petraitis', 1750),
+--('2023-05-01', 3, 'Antanas', 'Antanaitis', 1310);
+--select * from atlyginimai;
+----select NEBAIGTAS-------------------------------------------------------------
+--2. UZDUOTIS
+--
+--[!] Surkite lenteles "Klientai" ir "Tiekėjai";
+--[!] Parašykite užklausą su "UNION", kuri sujungia duomenis iš lentelės "Klientai" ir lentelės "Tiekėjai" 
+--ir atvaizduoja visus klientus ir tiekėjus kartu.
+
+--create table Tiekejai(tiekejo_id serial primary key, vardas varchar(100), pavarde varchar(100));
+--select * from tiekejai;
+--insert into Tiekejai(tiekejo_id, vardas, pavarde) values (61, 'Tomas', 'Tomaitis'), 
+--(62, 'Romas', 'Romaitis'),(63, 'Kazys', 'Kazaitis' );
+--select * from tiekejai;
+--
+--select kliento_id, pavarde, vardas from klientai union 
+--select tiekejo_id, vardas, pavarde from tiekejai;
+
+-------------------3 UZDUOTIS------------------------------------------------
+--[!] Sukurkite lenteles arba naudokite jau esamas "Produktai", "Pirkimai";
+--[!] Parašykite užklausą su "INNER JOIN", 
+--kuri sujungia duomenis iš lentelių "Produktai" ir "Pirkimai" 
+--pagal "produkto_id" ir atvaizduoja produktų pavadinimus ir kiekvieno produkto pirkimo sumą. 
+--[!] Raskite apsipirkimo vidurkį;
+
+
+---------------------------------------------- #7 paskaita ---------------------------------------------------------------------------
+
+--eksportavimas duomenu
+
+--(venv) C:\Program Files\PostgreSQL\15\bin>pg_dump -U postgres -d newdatabase -t orders -f C:/Users/Patricija/OneDrive/Desktop/exportorders.sql
+
+--select usename from pg_user;
+-------------------------------------------HASH(uzkodavimas)---------------------------------------------
+--select md5('CyberWarrior'); uzkodavimas 
+--select digest('CyberWarior', 'sha256');
+
+
+
+
+--select * from course;]]></console>
+    </connection>
+    <connection id="e3a5514a-128b-4da3-995f-1566fb1d44e3">
+      <console name="northwind" type="STANDARD" schema="public" session="Main"><![CDATA[-------Atvaizduokite visus darbuotojus, įskaitant jų vardą ir pavardę---
+--select * from employees;
+-------2.Raskite visus klientus, kurie yra iš Jungtinių Valstijų (Country = 'USA')---------
+--select * from customers where country = 'USA';
+--3.Atvaizduokite visų produktų pavadinimus ir jų kainas didėjimo tvarka;---------
+--select product_name, unit_price from products order by unit_price asc;
+--4.Atvaizduokite visus produktus kartu su jų kategorijos pavadinimu ir kiekvieno produkto tiekėjo pavadinimu.----
+
+--5.Raskite produktą, kurio kaina yra didžiausia;-------------------
+--select * from products where unit_price = (select max(unit_price) from products);
+--6.Raskite visus klientus, kurie neturi jokių užsakymų;
+--select * from customers where orders = 0;
+--7.Raskite produktus, kurių kaina yra didesnė nei kiekvieno produkto kategorijos vidutinė kaina.
+--select p.product_name, p.unit_price, c.category_name from products p
+--join categories c on p.category_id = c.category_id where p.unit_price > (select avg(unit_price)
+--from products where category_id = p.category_id)
+--8.Atvaizduokite visus produktus kartu su jų tiekėjo pavadinimu ir kategorijos pavadinimu, 
+--tačiau tik tuos produktus, kurie yra iš kategorijos "Confections" arba "Snacks".
+
+--9.Raskite visus klientus, kurie turi bent vieną užsakymą su pristatymo šalimi "Germany" arba "France";
+
+--10. Raskite visus užsakymus, kurių bendra suma viršija 5000 pinigų.
+
+----------------------------------------#9 paskaita ND-----------------------------------------------------------
+
+--Sveiki, praktikai su SQL northwind db:
+--1. Raskite visus klientus, kurie turi daugiau nei vieną užsakymą;
+--count
+--2. Raskite visus produktus, kurių likučio kiekis (units_in_stock) yra mažesnis nei užsakytas kiekis (units_on_order);
+--where
+--3. Raskite visus klientus, kurie perka daugiausiai skirtingų produktų;
+
+--4. Raskite visus produktus, kurių viso pardavimo pajamos (total_revenue) yra didžiausios.
+
+--5. Raskite 5 klientus, kurie turi didžiausią bendrą išlaidų sumą (order_total)
+
+---------------------------------------------#10 paskaita--------------------------------------------------------
+
+--1.Raskite produktą, kuris yra parduodamas 
+--daugiausiai kartų kaip kitas produktas papildomose užsakymų eilutėse (order_details)
+--
+--select p.product_id, p.product_name, count(od.order_id) as additional_order_count
+--from products p
+--join order_details od ON p.product_id = od.product_id
+----filtruojam produktus kurie yra parduodami daugiau kartu nei kiti produktai
+--where 
+--(select count(od1.order_id) from order_details od1
+--where p.product_id = od1.product_id) > 
+----skaiciuojam visus kitus uzsakymus kuriuose yra sis produktas-------------
+--(select count(od3.order_id) from order_details od3
+--where p.product_id = od3.product_id and od3.order_id <> od.order_id)
+----skaiciuoja visu kitu uzsakymu kieki kuriuose buvo sis produktas-------------
+--group by p.product_id, p.product_name 
+--order by additional_order_count desc limit 2; 
+
+--2.Raskite produktų kategoriją, kuri turi didžiausią vidutinę užsakymo kiekio vertę.---------
+
+--select cat.category_id, cat.category_name, avg(od.quantity * od.unit_price) as average_order_values from categories cat 
+--join products p on cat.category_id = p.category_id
+--join order_details od on p.product_id = od.product_id
+--group by cat.category_id, cat.category_name 
+--order by average_order_values desc limit 1 
+
+--3.Raskite klientus, 
+--kurie turi bent vieną užsakymą su kiekvienu produktu iš tam tikros kategorijos (pvz., kategorija 'Produce')
+
+--select c.customer_id, c.company_name
+--from customers c 
+--join orders o on c.customer_id = o.customer_id
+--join order_details od on o.order_id = od.order_id
+--join products p on od.product_id = p.product_id
+--join categories cat on p.category_id = cat.category_id
+--where cat.category_name='Produce'--ieskom tam tikros kategorijos
+--group by c.customer_id, c.company_name-- grupuojam rezulatatus pagal kliento id, pagal unikalius klientus
+--having count (distinct p.product_id) = ( --tikrinam ar kliento turimu produktu skaicius ID, atitinka paminetos kategorijos produktus
+--select count(distinct product_id) from products -- kad gauti produce kategorijos ID ir galetume suskaiciuoti tos kategorijos produktu skaiciu
+--where category_id = (
+--select category_id from categories where category_name = 'Produce'))
+
+--4.Raskite klientus, kurie turi daugiau nei vieną užsakymą, bet jų visų užsakymų bendra suma yra mažesnė nei 1000
+
+--select  customer_id, count(*) as order_count, sum(order_total) as total_amount from (
+--select o.customer_id, o.order_id, sum(od.quantity * od.unit_price) as order_total from orders o 
+--join order_details od on o.order_id = od.order_id
+--group by o.customer_id, o.order_id) as subquery
+--groub by customer_id
+--having count(*) >1 and sum(order_total) <1000
+
+--5.Raskite kategorijas, kuriose yra bent du produktai su vidutine kaina, 
+--viršijančia bendrą vidutinę kainą visų produktų;
+
+--select category_id, count(*) as product_count, avg(unit_price) as average_price
+--from products 
+--group by category_id having count(*)>=2 and avg(unit_price) > (select avg(unit_price) from products);
+---------------------------------------------------------------------------------------------------------------------
+--Duomenų bazė: NorthWind
+-- 
+--1 UZDUOTIS.-- Raskite klientus, kurie per visą laikotarpį padarė bent
+--du užsakymus ir kurių paskutinio užsakymo data yra vėliau nei pirmojo užsakymo data.
+
+--SELECT c.customer_id, c.company_name FROM customers c
+--JOIN orders o ON c.customer_id = o.customer_id
+--GROUP BY c.customer_id, c.company_name
+--HAVING COUNT(DISTINCT o.order_id) >= 2 AND MAX(o.order_date) > MIN(o.order_date);
+
+--2. UZDUOTIS.-Duomenų bazė: NorthWind
+
+-- Raskite klientus, kurie turi didžiausią užsakytų
+--produktų skaičių.
+--
+--SELECT c.customer_id, c.company_name, COUNT(od.product_id) AS total_products_ordered
+--FROM customers c
+--JOIN orders o ON c.customer_id = o.customer_id
+--JOIN order_details od ON o.order_id = od.order_id
+--GROUP BY c.customer_id, c.company_name
+--HAVING COUNT(od.product_id) = (
+--SELECT COUNT(product_id)
+--FROM order_details
+--GROUP BY order_id
+--ORDER BY COUNT(product_id) DESC
+--LIMIT 1
+--);]]></console>
+    </connection>
+  </component>
+  <component name="DBNavigator.Project.DatabaseEditorStateManager">
+    <last-used-providers>
+      <object-type object-type="VIEW" editor-provider="DATA" />
+    </last-used-providers>
+  </component>
+  <component name="DBNavigator.Project.DatabaseFileManager">
+    <open-files />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="1ba4088b-a1b6-4276-b1b5-071574f646cd" dataset="public.film_list" active-filter-id="" />
+    <filter-actions connection-id="1ba4088b-a1b6-4276-b1b5-071574f646cd" dataset="public.actor" active-filter-id="" />
+    <filter-actions connection-id="1ba4088b-a1b6-4276-b1b5-071574f646cd" dataset="public.customer_list" active-filter-id="" />
+    <filter-actions connection-id="1ba4088b-a1b6-4276-b1b5-071574f646cd" dataset="public.customer" active-filter-id="" />
+    <filter-actions connection-id="1ba4088b-a1b6-4276-b1b5-071574f646cd" dataset="public.address" active-filter-id="" />
+    <filter-actions connection-id="1ba4088b-a1b6-4276-b1b5-071574f646cd" dataset="public.city" active-filter-id="" />
+    <filter-actions connection-id="1ba4088b-a1b6-4276-b1b5-071574f646cd" dataset="public.payment_p2022_07" active-filter-id="" />
+    <filter-actions connection-id="1ba4088b-a1b6-4276-b1b5-071574f646cd" dataset="public.category" active-filter-id="" />
+    <filter-actions connection-id="1ba4088b-a1b6-4276-b1b5-071574f646cd" dataset="public.country" active-filter-id="" />
+    <filter-actions connection-id="2a711178-bbc6-40d2-be20-2c1e64eb3ef7" dataset="public.users" active-filter-id="" />
+    <filter-actions connection-id="2a711178-bbc6-40d2-be20-2c1e64eb3ef7" dataset="public.course" active-filter-id="" />
+    <filter-actions connection-id="2a711178-bbc6-40d2-be20-2c1e64eb3ef7" dataset="public.students" active-filter-id="" />
+    <filter-actions connection-id="f61c9ae3-1a7c-4ffe-a2fa-4bbf8459b732" dataset="bookings.airports_data" active-filter-id="" />
+    <filter-actions connection-id="f61c9ae3-1a7c-4ffe-a2fa-4bbf8459b732" dataset="bookings.aircrafts_data" active-filter-id="" />
+    <filter-actions connection-id="f61c9ae3-1a7c-4ffe-a2fa-4bbf8459b732" dataset="bookings.ticket_flights" active-filter-id="" />
+  </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
+  </component>
+  <component name="DBNavigator.Project.ObjectQuickFilterManager">
+    <last-used-operator value="EQUAL" />
+    <filters />
+  </component>
+  <component name="DBNavigator.Project.Settings">
+    <connections>
+      <connection id="907a6797-bdf2-4f22-8ae5-b2a649f94b4d" active="true" signed="true">
+        <database>
+          <name value="Connection" />
+          <description value="" />
+          <database-type value="POSTGRES" />
+          <config-type value="BASIC" />
+          <database-version value="15.3" />
+          <driver-source value="BUNDLED" />
+          <driver-library value="" />
+          <driver value="" />
+          <url-type value="DATABASE" />
+          <host value="localhost" />
+          <port value="5432" />
+          <database value="clients" />
+          <tns-folder value="" />
+          <tns-profile value="" />
+          <type value="USER_PASSWORD" />
+          <user value="postgres" />
+          <deprecated-pwd value="dGlybGlwaXJsaQ==" />
+        </database>
+        <properties>
+          <auto-commit value="false" />
+        </properties>
+        <ssh-settings>
+          <active value="false" />
+          <proxy-host value="" />
+          <proxy-port value="22" />
+          <proxy-user value="" />
+          <deprecated-proxy-pwd value="" />
+          <auth-type value="PASSWORD" />
+          <key-file value="" />
+          <key-passphrase value="" />
+        </ssh-settings>
+        <ssl-settings>
+          <active value="false" />
+          <certificate-authority-file value="" />
+          <client-certificate-file value="" />
+          <client-key-file value="" />
+        </ssl-settings>
+        <details>
+          <charset value="UTF-8" />
+          <session-management value="true" />
+          <ddl-file-binding value="true" />
+          <database-logging value="true" />
+          <connect-automatically value="true" />
+          <restore-workspace value="true" />
+          <restore-workspace-deep value="false" />
+          <environment-type value="default" />
+          <connectivity-timeout value="30" />
+          <idle-time-to-disconnect value="30" />
+          <idle-time-to-disconnect-pool value="5" />
+          <credential-expiry-time value="10" />
+          <max-connection-pool-size value="7" />
+          <alternative-statement-delimiter value="" />
+        </details>
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
+          <object-type-filter>
+            <object-type name="SCHEMA" enabled="true" />
+            <object-type name="USER" enabled="true" />
+            <object-type name="ROLE" enabled="true" />
+            <object-type name="PRIVILEGE" enabled="true" />
+            <object-type name="CHARSET" enabled="true" />
+            <object-type name="TABLE" enabled="true" />
+            <object-type name="VIEW" enabled="true" />
+            <object-type name="MATERIALIZED_VIEW" enabled="true" />
+            <object-type name="NESTED_TABLE" enabled="true" />
+            <object-type name="COLUMN" enabled="true" />
+            <object-type name="INDEX" enabled="true" />
+            <object-type name="CONSTRAINT" enabled="true" />
+            <object-type name="DATASET_TRIGGER" enabled="true" />
+            <object-type name="DATABASE_TRIGGER" enabled="true" />
+            <object-type name="SYNONYM" enabled="true" />
+            <object-type name="SEQUENCE" enabled="true" />
+            <object-type name="PROCEDURE" enabled="true" />
+            <object-type name="FUNCTION" enabled="true" />
+            <object-type name="PACKAGE" enabled="true" />
+            <object-type name="TYPE" enabled="true" />
+            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+            <object-type name="ARGUMENT" enabled="true" />
+            <object-type name="DIMENSION" enabled="true" />
+            <object-type name="CLUSTER" enabled="true" />
+            <object-type name="DBLINK" enabled="true" />
+          </object-type-filter>
+          <object-name-filters />
+        </object-filters>
+      </connection>
+      <connection id="529fc643-8a96-4f0d-8fde-a2aa73da8c44" active="true" signed="true">
+        <database>
+          <name value="Connection 1" />
+          <description value="" />
+          <database-type value="POSTGRES" />
+          <config-type value="BASIC" />
+          <database-version value="15.3" />
+          <driver-source value="BUNDLED" />
+          <driver-library value="" />
+          <driver value="" />
+          <url-type value="DATABASE" />
+          <host value="localhost" />
+          <port value="5432" />
+          <database value="pagila" />
+          <tns-folder value="" />
+          <tns-profile value="" />
+          <type value="USER_PASSWORD" />
+          <user value="postgres" />
+          <deprecated-pwd value="dGlybGlwaXJsaQ==" />
+        </database>
+        <properties>
+          <auto-commit value="false" />
+        </properties>
+        <ssh-settings>
+          <active value="false" />
+          <proxy-host value="" />
+          <proxy-port value="22" />
+          <proxy-user value="" />
+          <deprecated-proxy-pwd value="" />
+          <auth-type value="PASSWORD" />
+          <key-file value="" />
+          <key-passphrase value="" />
+        </ssh-settings>
+        <ssl-settings>
+          <active value="false" />
+          <certificate-authority-file value="" />
+          <client-certificate-file value="" />
+          <client-key-file value="" />
+        </ssl-settings>
+        <details>
+          <charset value="UTF-8" />
+          <session-management value="true" />
+          <ddl-file-binding value="true" />
+          <database-logging value="true" />
+          <connect-automatically value="true" />
+          <restore-workspace value="true" />
+          <restore-workspace-deep value="false" />
+          <environment-type value="default" />
+          <connectivity-timeout value="30" />
+          <idle-time-to-disconnect value="30" />
+          <idle-time-to-disconnect-pool value="5" />
+          <credential-expiry-time value="10" />
+          <max-connection-pool-size value="7" />
+          <alternative-statement-delimiter value="" />
+        </details>
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
+          <object-type-filter>
+            <object-type name="SCHEMA" enabled="true" />
+            <object-type name="USER" enabled="true" />
+            <object-type name="ROLE" enabled="true" />
+            <object-type name="PRIVILEGE" enabled="true" />
+            <object-type name="CHARSET" enabled="true" />
+            <object-type name="TABLE" enabled="true" />
+            <object-type name="VIEW" enabled="true" />
+            <object-type name="MATERIALIZED_VIEW" enabled="true" />
+            <object-type name="NESTED_TABLE" enabled="true" />
+            <object-type name="COLUMN" enabled="true" />
+            <object-type name="INDEX" enabled="true" />
+            <object-type name="CONSTRAINT" enabled="true" />
+            <object-type name="DATASET_TRIGGER" enabled="true" />
+            <object-type name="DATABASE_TRIGGER" enabled="true" />
+            <object-type name="SYNONYM" enabled="true" />
+            <object-type name="SEQUENCE" enabled="true" />
+            <object-type name="PROCEDURE" enabled="true" />
+            <object-type name="FUNCTION" enabled="true" />
+            <object-type name="PACKAGE" enabled="true" />
+            <object-type name="TYPE" enabled="true" />
+            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+            <object-type name="ARGUMENT" enabled="true" />
+            <object-type name="DIMENSION" enabled="true" />
+            <object-type name="CLUSTER" enabled="true" />
+            <object-type name="DBLINK" enabled="true" />
+          </object-type-filter>
+          <object-name-filters />
+        </object-filters>
+      </connection>
+      <connection id="32aaee02-eaa8-4752-9883-fc9cf6ec4ce6" active="true" signed="true">
+        <database>
+          <name value="Connection 2" />
+          <description value="" />
+          <database-type value="POSTGRES" />
+          <config-type value="BASIC" />
+          <database-version value="15.3" />
+          <driver-source value="BUNDLED" />
+          <driver-library value="" />
+          <driver value="" />
+          <url-type value="DATABASE" />
+          <host value="localhost" />
+          <port value="5432" />
+          <database value="pagila" />
+          <tns-folder value="" />
+          <tns-profile value="" />
+          <type value="USER_PASSWORD" />
+          <user value="postgres" />
+          <deprecated-pwd value="dGlybGlwaXJsaQ==" />
+        </database>
+        <properties>
+          <auto-commit value="false" />
+        </properties>
+        <ssh-settings>
+          <active value="false" />
+          <proxy-host value="" />
+          <proxy-port value="22" />
+          <proxy-user value="" />
+          <deprecated-proxy-pwd value="" />
+          <auth-type value="PASSWORD" />
+          <key-file value="" />
+          <key-passphrase value="" />
+        </ssh-settings>
+        <ssl-settings>
+          <active value="false" />
+          <certificate-authority-file value="" />
+          <client-certificate-file value="" />
+          <client-key-file value="" />
+        </ssl-settings>
+        <details>
+          <charset value="UTF-8" />
+          <session-management value="true" />
+          <ddl-file-binding value="true" />
+          <database-logging value="true" />
+          <connect-automatically value="true" />
+          <restore-workspace value="true" />
+          <restore-workspace-deep value="false" />
+          <environment-type value="default" />
+          <connectivity-timeout value="30" />
+          <idle-time-to-disconnect value="30" />
+          <idle-time-to-disconnect-pool value="5" />
+          <credential-expiry-time value="10" />
+          <max-connection-pool-size value="7" />
+          <alternative-statement-delimiter value="" />
+        </details>
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
+          <object-type-filter>
+            <object-type name="SCHEMA" enabled="true" />
+            <object-type name="USER" enabled="true" />
+            <object-type name="ROLE" enabled="true" />
+            <object-type name="PRIVILEGE" enabled="true" />
+            <object-type name="CHARSET" enabled="true" />
+            <object-type name="TABLE" enabled="true" />
+            <object-type name="VIEW" enabled="true" />
+            <object-type name="MATERIALIZED_VIEW" enabled="true" />
+            <object-type name="NESTED_TABLE" enabled="true" />
+            <object-type name="COLUMN" enabled="true" />
+            <object-type name="INDEX" enabled="true" />
+            <object-type name="CONSTRAINT" enabled="true" />
+            <object-type name="DATASET_TRIGGER" enabled="true" />
+            <object-type name="DATABASE_TRIGGER" enabled="true" />
+            <object-type name="SYNONYM" enabled="true" />
+            <object-type name="SEQUENCE" enabled="true" />
+            <object-type name="PROCEDURE" enabled="true" />
+            <object-type name="FUNCTION" enabled="true" />
+            <object-type name="PACKAGE" enabled="true" />
+            <object-type name="TYPE" enabled="true" />
+            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+            <object-type name="ARGUMENT" enabled="true" />
+            <object-type name="DIMENSION" enabled="true" />
+            <object-type name="CLUSTER" enabled="true" />
+            <object-type name="DBLINK" enabled="true" />
+          </object-type-filter>
+          <object-name-filters />
+        </object-filters>
+      </connection>
+      <connection id="1ba4088b-a1b6-4276-b1b5-071574f646cd" active="true" signed="true">
+        <database>
+          <name value="pagila" />
+          <description value="" />
+          <database-type value="POSTGRES" />
+          <config-type value="BASIC" />
+          <database-version value="15.3" />
+          <driver-source value="BUNDLED" />
+          <driver-library value="" />
+          <driver value="" />
+          <url-type value="DATABASE" />
+          <host value="localhost" />
+          <port value="5432" />
+          <database value="pagila" />
+          <tns-folder value="" />
+          <tns-profile value="" />
+          <type value="USER_PASSWORD" />
+          <user value="postgres" />
+          <deprecated-pwd value="dGlybGlwaXJsaQ==" />
+        </database>
+        <properties>
+          <auto-commit value="false" />
+        </properties>
+        <ssh-settings>
+          <active value="false" />
+          <proxy-host value="" />
+          <proxy-port value="22" />
+          <proxy-user value="" />
+          <deprecated-proxy-pwd value="" />
+          <auth-type value="PASSWORD" />
+          <key-file value="" />
+          <key-passphrase value="" />
+        </ssh-settings>
+        <ssl-settings>
+          <active value="false" />
+          <certificate-authority-file value="" />
+          <client-certificate-file value="" />
+          <client-key-file value="" />
+        </ssl-settings>
+        <details>
+          <charset value="UTF-8" />
+          <session-management value="true" />
+          <ddl-file-binding value="true" />
+          <database-logging value="true" />
+          <connect-automatically value="true" />
+          <restore-workspace value="true" />
+          <restore-workspace-deep value="false" />
+          <environment-type value="default" />
+          <connectivity-timeout value="30" />
+          <idle-time-to-disconnect value="30" />
+          <idle-time-to-disconnect-pool value="5" />
+          <credential-expiry-time value="10" />
+          <max-connection-pool-size value="7" />
+          <alternative-statement-delimiter value="" />
+        </details>
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
+          <object-type-filter>
+            <object-type name="SCHEMA" enabled="true" />
+            <object-type name="USER" enabled="true" />
+            <object-type name="ROLE" enabled="true" />
+            <object-type name="PRIVILEGE" enabled="true" />
+            <object-type name="CHARSET" enabled="true" />
+            <object-type name="TABLE" enabled="true" />
+            <object-type name="VIEW" enabled="true" />
+            <object-type name="MATERIALIZED_VIEW" enabled="true" />
+            <object-type name="NESTED_TABLE" enabled="true" />
+            <object-type name="COLUMN" enabled="true" />
+            <object-type name="INDEX" enabled="true" />
+            <object-type name="CONSTRAINT" enabled="true" />
+            <object-type name="DATASET_TRIGGER" enabled="true" />
+            <object-type name="DATABASE_TRIGGER" enabled="true" />
+            <object-type name="SYNONYM" enabled="true" />
+            <object-type name="SEQUENCE" enabled="true" />
+            <object-type name="PROCEDURE" enabled="true" />
+            <object-type name="FUNCTION" enabled="true" />
+            <object-type name="PACKAGE" enabled="true" />
+            <object-type name="TYPE" enabled="true" />
+            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+            <object-type name="ARGUMENT" enabled="true" />
+            <object-type name="DIMENSION" enabled="true" />
+            <object-type name="CLUSTER" enabled="true" />
+            <object-type name="DBLINK" enabled="true" />
+          </object-type-filter>
+          <object-name-filters />
+        </object-filters>
+      </connection>
+      <connection id="f61c9ae3-1a7c-4ffe-a2fa-4bbf8459b732" active="true" signed="true">
+        <database>
+          <name value="demo" />
+          <description value="" />
+          <database-type value="POSTGRES" />
+          <config-type value="BASIC" />
+          <database-version value="15.3" />
+          <driver-source value="BUNDLED" />
+          <driver-library value="" />
+          <driver value="" />
+          <url-type value="DATABASE" />
+          <host value="localhost" />
+          <port value="5432" />
+          <database value="demo" />
+          <tns-folder value="" />
+          <tns-profile value="" />
+          <type value="USER_PASSWORD" />
+          <user value="postgres" />
+          <deprecated-pwd value="dGlybGlwaXJsaQ==" />
+        </database>
+        <properties>
+          <auto-commit value="false" />
+        </properties>
+        <ssh-settings>
+          <active value="false" />
+          <proxy-host value="" />
+          <proxy-port value="22" />
+          <proxy-user value="" />
+          <deprecated-proxy-pwd value="" />
+          <auth-type value="PASSWORD" />
+          <key-file value="" />
+          <key-passphrase value="" />
+        </ssh-settings>
+        <ssl-settings>
+          <active value="false" />
+          <certificate-authority-file value="" />
+          <client-certificate-file value="" />
+          <client-key-file value="" />
+        </ssl-settings>
+        <details>
+          <charset value="UTF-8" />
+          <session-management value="true" />
+          <ddl-file-binding value="true" />
+          <database-logging value="true" />
+          <connect-automatically value="true" />
+          <restore-workspace value="true" />
+          <restore-workspace-deep value="false" />
+          <environment-type value="default" />
+          <connectivity-timeout value="30" />
+          <idle-time-to-disconnect value="30" />
+          <idle-time-to-disconnect-pool value="5" />
+          <credential-expiry-time value="10" />
+          <max-connection-pool-size value="7" />
+          <alternative-statement-delimiter value="" />
+        </details>
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
+          <object-type-filter>
+            <object-type name="SCHEMA" enabled="true" />
+            <object-type name="USER" enabled="true" />
+            <object-type name="ROLE" enabled="true" />
+            <object-type name="PRIVILEGE" enabled="true" />
+            <object-type name="CHARSET" enabled="true" />
+            <object-type name="TABLE" enabled="true" />
+            <object-type name="VIEW" enabled="true" />
+            <object-type name="MATERIALIZED_VIEW" enabled="true" />
+            <object-type name="NESTED_TABLE" enabled="true" />
+            <object-type name="COLUMN" enabled="true" />
+            <object-type name="INDEX" enabled="true" />
+            <object-type name="CONSTRAINT" enabled="true" />
+            <object-type name="DATASET_TRIGGER" enabled="true" />
+            <object-type name="DATABASE_TRIGGER" enabled="true" />
+            <object-type name="SYNONYM" enabled="true" />
+            <object-type name="SEQUENCE" enabled="true" />
+            <object-type name="PROCEDURE" enabled="true" />
+            <object-type name="FUNCTION" enabled="true" />
+            <object-type name="PACKAGE" enabled="true" />
+            <object-type name="TYPE" enabled="true" />
+            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+            <object-type name="ARGUMENT" enabled="true" />
+            <object-type name="DIMENSION" enabled="true" />
+            <object-type name="CLUSTER" enabled="true" />
+            <object-type name="DBLINK" enabled="true" />
+          </object-type-filter>
+          <object-name-filters />
+        </object-filters>
+      </connection>
+      <connection id="2a946236-b9e5-4948-9081-575093059441" active="true" signed="true">
+        <database>
+          <name value="Connection 4" />
+          <description value="" />
+          <database-type value="POSTGRES" />
+          <config-type value="BASIC" />
+          <database-version value="15.3" />
+          <driver-source value="BUNDLED" />
+          <driver-library value="" />
+          <driver value="" />
+          <url-type value="DATABASE" />
+          <host value="localhost" />
+          <port value="5432" />
+          <database value="postgres" />
+          <tns-folder value="" />
+          <tns-profile value="" />
+          <type value="USER_PASSWORD" />
+          <user value="postgres" />
+          <deprecated-pwd value="dGlybGlwaXJsaQ==" />
+        </database>
+        <properties>
+          <auto-commit value="false" />
+        </properties>
+        <ssh-settings>
+          <active value="false" />
+          <proxy-host value="" />
+          <proxy-port value="22" />
+          <proxy-user value="" />
+          <deprecated-proxy-pwd value="" />
+          <auth-type value="PASSWORD" />
+          <key-file value="" />
+          <key-passphrase value="" />
+        </ssh-settings>
+        <ssl-settings>
+          <active value="false" />
+          <certificate-authority-file value="" />
+          <client-certificate-file value="" />
+          <client-key-file value="" />
+        </ssl-settings>
+        <details>
+          <charset value="UTF-8" />
+          <session-management value="true" />
+          <ddl-file-binding value="true" />
+          <database-logging value="true" />
+          <connect-automatically value="true" />
+          <restore-workspace value="true" />
+          <restore-workspace-deep value="false" />
+          <environment-type value="default" />
+          <connectivity-timeout value="30" />
+          <idle-time-to-disconnect value="30" />
+          <idle-time-to-disconnect-pool value="5" />
+          <credential-expiry-time value="10" />
+          <max-connection-pool-size value="7" />
+          <alternative-statement-delimiter value="" />
+        </details>
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
+          <object-type-filter>
+            <object-type name="SCHEMA" enabled="true" />
+            <object-type name="USER" enabled="true" />
+            <object-type name="ROLE" enabled="true" />
+            <object-type name="PRIVILEGE" enabled="true" />
+            <object-type name="CHARSET" enabled="true" />
+            <object-type name="TABLE" enabled="true" />
+            <object-type name="VIEW" enabled="true" />
+            <object-type name="MATERIALIZED_VIEW" enabled="true" />
+            <object-type name="NESTED_TABLE" enabled="true" />
+            <object-type name="COLUMN" enabled="true" />
+            <object-type name="INDEX" enabled="true" />
+            <object-type name="CONSTRAINT" enabled="true" />
+            <object-type name="DATASET_TRIGGER" enabled="true" />
+            <object-type name="DATABASE_TRIGGER" enabled="true" />
+            <object-type name="SYNONYM" enabled="true" />
+            <object-type name="SEQUENCE" enabled="true" />
+            <object-type name="PROCEDURE" enabled="true" />
+            <object-type name="FUNCTION" enabled="true" />
+            <object-type name="PACKAGE" enabled="true" />
+            <object-type name="TYPE" enabled="true" />
+            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+            <object-type name="ARGUMENT" enabled="true" />
+            <object-type name="DIMENSION" enabled="true" />
+            <object-type name="CLUSTER" enabled="true" />
+            <object-type name="DBLINK" enabled="true" />
+          </object-type-filter>
+          <object-name-filters />
+        </object-filters>
+      </connection>
+      <connection id="62323100-8322-4506-ba2c-5ceaf0eb9925" active="true" signed="true">
+        <database>
+          <name value="Connection 5" />
+          <description value="" />
+          <database-type value="POSTGRES" />
+          <config-type value="BASIC" />
+          <database-version value="15.3" />
+          <driver-source value="BUNDLED" />
+          <driver-library value="" />
+          <driver value="" />
+          <url-type value="DATABASE" />
+          <host value="localhost" />
+          <port value="5432" />
+          <database value="newdatabase" />
+          <tns-folder value="" />
+          <tns-profile value="" />
+          <type value="USER_PASSWORD" />
+          <user value="postgres" />
+          <deprecated-pwd value="dGlybGlwaXJsaQ==" />
+        </database>
+        <properties>
+          <auto-commit value="false" />
+        </properties>
+        <ssh-settings>
+          <active value="false" />
+          <proxy-host value="" />
+          <proxy-port value="22" />
+          <proxy-user value="" />
+          <deprecated-proxy-pwd value="" />
+          <auth-type value="PASSWORD" />
+          <key-file value="" />
+          <key-passphrase value="" />
+        </ssh-settings>
+        <ssl-settings>
+          <active value="false" />
+          <certificate-authority-file value="" />
+          <client-certificate-file value="" />
+          <client-key-file value="" />
+        </ssl-settings>
+        <details>
+          <charset value="UTF-8" />
+          <session-management value="true" />
+          <ddl-file-binding value="true" />
+          <database-logging value="true" />
+          <connect-automatically value="true" />
+          <restore-workspace value="true" />
+          <restore-workspace-deep value="false" />
+          <environment-type value="default" />
+          <connectivity-timeout value="30" />
+          <idle-time-to-disconnect value="30" />
+          <idle-time-to-disconnect-pool value="5" />
+          <credential-expiry-time value="10" />
+          <max-connection-pool-size value="7" />
+          <alternative-statement-delimiter value="" />
+        </details>
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
+          <object-type-filter>
+            <object-type name="SCHEMA" enabled="true" />
+            <object-type name="USER" enabled="true" />
+            <object-type name="ROLE" enabled="true" />
+            <object-type name="PRIVILEGE" enabled="true" />
+            <object-type name="CHARSET" enabled="true" />
+            <object-type name="TABLE" enabled="true" />
+            <object-type name="VIEW" enabled="true" />
+            <object-type name="MATERIALIZED_VIEW" enabled="true" />
+            <object-type name="NESTED_TABLE" enabled="true" />
+            <object-type name="COLUMN" enabled="true" />
+            <object-type name="INDEX" enabled="true" />
+            <object-type name="CONSTRAINT" enabled="true" />
+            <object-type name="DATASET_TRIGGER" enabled="true" />
+            <object-type name="DATABASE_TRIGGER" enabled="true" />
+            <object-type name="SYNONYM" enabled="true" />
+            <object-type name="SEQUENCE" enabled="true" />
+            <object-type name="PROCEDURE" enabled="true" />
+            <object-type name="FUNCTION" enabled="true" />
+            <object-type name="PACKAGE" enabled="true" />
+            <object-type name="TYPE" enabled="true" />
+            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+            <object-type name="ARGUMENT" enabled="true" />
+            <object-type name="DIMENSION" enabled="true" />
+            <object-type name="CLUSTER" enabled="true" />
+            <object-type name="DBLINK" enabled="true" />
+          </object-type-filter>
+          <object-name-filters />
+        </object-filters>
+      </connection>
+      <connection id="2a711178-bbc6-40d2-be20-2c1e64eb3ef7" active="true" signed="true">
+        <database>
+          <name value="Connection 6" />
+          <description value="" />
+          <database-type value="POSTGRES" />
+          <config-type value="BASIC" />
+          <database-version value="15.3" />
+          <driver-source value="BUNDLED" />
+          <driver-library value="" />
+          <driver value="" />
+          <url-type value="DATABASE" />
+          <host value="localhost" />
+          <port value="5432" />
+          <database value="newdatabase" />
+          <tns-folder value="" />
+          <tns-profile value="" />
+          <type value="USER_PASSWORD" />
+          <user value="postgres" />
+          <deprecated-pwd value="dGlybGlwaXJsaQ==" />
+        </database>
+        <properties>
+          <auto-commit value="false" />
+        </properties>
+        <ssh-settings>
+          <active value="false" />
+          <proxy-host value="" />
+          <proxy-port value="22" />
+          <proxy-user value="" />
+          <deprecated-proxy-pwd value="" />
+          <auth-type value="PASSWORD" />
+          <key-file value="" />
+          <key-passphrase value="" />
+        </ssh-settings>
+        <ssl-settings>
+          <active value="false" />
+          <certificate-authority-file value="" />
+          <client-certificate-file value="" />
+          <client-key-file value="" />
+        </ssl-settings>
+        <details>
+          <charset value="UTF-8" />
+          <session-management value="true" />
+          <ddl-file-binding value="true" />
+          <database-logging value="true" />
+          <connect-automatically value="true" />
+          <restore-workspace value="true" />
+          <restore-workspace-deep value="false" />
+          <environment-type value="default" />
+          <connectivity-timeout value="30" />
+          <idle-time-to-disconnect value="30" />
+          <idle-time-to-disconnect-pool value="5" />
+          <credential-expiry-time value="10" />
+          <max-connection-pool-size value="7" />
+          <alternative-statement-delimiter value="" />
+        </details>
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
+          <object-type-filter>
+            <object-type name="SCHEMA" enabled="true" />
+            <object-type name="USER" enabled="true" />
+            <object-type name="ROLE" enabled="true" />
+            <object-type name="PRIVILEGE" enabled="true" />
+            <object-type name="CHARSET" enabled="true" />
+            <object-type name="TABLE" enabled="true" />
+            <object-type name="VIEW" enabled="true" />
+            <object-type name="MATERIALIZED_VIEW" enabled="true" />
+            <object-type name="NESTED_TABLE" enabled="true" />
+            <object-type name="COLUMN" enabled="true" />
+            <object-type name="INDEX" enabled="true" />
+            <object-type name="CONSTRAINT" enabled="true" />
+            <object-type name="DATASET_TRIGGER" enabled="true" />
+            <object-type name="DATABASE_TRIGGER" enabled="true" />
+            <object-type name="SYNONYM" enabled="true" />
+            <object-type name="SEQUENCE" enabled="true" />
+            <object-type name="PROCEDURE" enabled="true" />
+            <object-type name="FUNCTION" enabled="true" />
+            <object-type name="PACKAGE" enabled="true" />
+            <object-type name="TYPE" enabled="true" />
+            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+            <object-type name="ARGUMENT" enabled="true" />
+            <object-type name="DIMENSION" enabled="true" />
+            <object-type name="CLUSTER" enabled="true" />
+            <object-type name="DBLINK" enabled="true" />
+          </object-type-filter>
+          <object-name-filters />
+        </object-filters>
+      </connection>
+      <connection id="e3a5514a-128b-4da3-995f-1566fb1d44e3" active="true" signed="true">
+        <database>
+          <name value="northwind" />
+          <description value="" />
+          <database-type value="POSTGRES" />
+          <config-type value="BASIC" />
+          <database-version value="15.3" />
+          <driver-source value="BUNDLED" />
+          <driver-library value="" />
+          <driver value="" />
+          <url-type value="DATABASE" />
+          <host value="localhost" />
+          <port value="5432" />
+          <database value="postgres" />
+          <tns-folder value="" />
+          <tns-profile value="" />
+          <type value="USER_PASSWORD" />
+          <user value="postgres" />
+          <deprecated-pwd value="dGlybGlwaXJsaQ==" />
+        </database>
+        <properties>
+          <auto-commit value="false" />
+        </properties>
+        <ssh-settings>
+          <active value="false" />
+          <proxy-host value="" />
+          <proxy-port value="22" />
+          <proxy-user value="" />
+          <deprecated-proxy-pwd value="" />
+          <auth-type value="PASSWORD" />
+          <key-file value="" />
+          <key-passphrase value="" />
+        </ssh-settings>
+        <ssl-settings>
+          <active value="false" />
+          <certificate-authority-file value="" />
+          <client-certificate-file value="" />
+          <client-key-file value="" />
+        </ssl-settings>
+        <details>
+          <charset value="UTF-8" />
+          <session-management value="true" />
+          <ddl-file-binding value="true" />
+          <database-logging value="true" />
+          <connect-automatically value="true" />
+          <restore-workspace value="true" />
+          <restore-workspace-deep value="false" />
+          <environment-type value="default" />
+          <connectivity-timeout value="30" />
+          <idle-time-to-disconnect value="30" />
+          <idle-time-to-disconnect-pool value="5" />
+          <credential-expiry-time value="10" />
+          <max-connection-pool-size value="7" />
+          <alternative-statement-delimiter value="" />
+        </details>
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
+          <object-type-filter>
+            <object-type name="SCHEMA" enabled="true" />
+            <object-type name="USER" enabled="true" />
+            <object-type name="ROLE" enabled="true" />
+            <object-type name="PRIVILEGE" enabled="true" />
+            <object-type name="CHARSET" enabled="true" />
+            <object-type name="TABLE" enabled="true" />
+            <object-type name="VIEW" enabled="true" />
+            <object-type name="MATERIALIZED_VIEW" enabled="true" />
+            <object-type name="NESTED_TABLE" enabled="true" />
+            <object-type name="COLUMN" enabled="true" />
+            <object-type name="INDEX" enabled="true" />
+            <object-type name="CONSTRAINT" enabled="true" />
+            <object-type name="DATASET_TRIGGER" enabled="true" />
+            <object-type name="DATABASE_TRIGGER" enabled="true" />
+            <object-type name="SYNONYM" enabled="true" />
+            <object-type name="SEQUENCE" enabled="true" />
+            <object-type name="PROCEDURE" enabled="true" />
+            <object-type name="FUNCTION" enabled="true" />
+            <object-type name="PACKAGE" enabled="true" />
+            <object-type name="TYPE" enabled="true" />
+            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+            <object-type name="ARGUMENT" enabled="true" />
+            <object-type name="DIMENSION" enabled="true" />
+            <object-type name="CLUSTER" enabled="true" />
+            <object-type name="DBLINK" enabled="true" />
+          </object-type-filter>
+          <object-name-filters />
+        </object-filters>
+      </connection>
+    </connections>
+    <browser-settings>
+      <general>
+        <display-mode value="TABBED" />
+        <navigation-history-size value="100" />
+        <show-object-details value="false" />
+      </general>
+      <filters>
+        <object-type-filter>
+          <object-type name="SCHEMA" enabled="true" />
+          <object-type name="USER" enabled="true" />
+          <object-type name="ROLE" enabled="true" />
+          <object-type name="PRIVILEGE" enabled="true" />
+          <object-type name="CHARSET" enabled="true" />
+          <object-type name="TABLE" enabled="true" />
+          <object-type name="VIEW" enabled="true" />
+          <object-type name="MATERIALIZED_VIEW" enabled="true" />
+          <object-type name="NESTED_TABLE" enabled="true" />
+          <object-type name="COLUMN" enabled="true" />
+          <object-type name="INDEX" enabled="true" />
+          <object-type name="CONSTRAINT" enabled="true" />
+          <object-type name="DATASET_TRIGGER" enabled="true" />
+          <object-type name="DATABASE_TRIGGER" enabled="true" />
+          <object-type name="SYNONYM" enabled="true" />
+          <object-type name="SEQUENCE" enabled="true" />
+          <object-type name="PROCEDURE" enabled="true" />
+          <object-type name="FUNCTION" enabled="true" />
+          <object-type name="PACKAGE" enabled="true" />
+          <object-type name="TYPE" enabled="true" />
+          <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+          <object-type name="ARGUMENT" enabled="true" />
+          <object-type name="DIMENSION" enabled="true" />
+          <object-type name="CLUSTER" enabled="true" />
+          <object-type name="DBLINK" enabled="true" />
+        </object-type-filter>
+      </filters>
+      <sorting>
+        <object-type name="COLUMN" sorting-type="NAME" />
+        <object-type name="FUNCTION" sorting-type="NAME" />
+        <object-type name="PROCEDURE" sorting-type="NAME" />
+        <object-type name="ARGUMENT" sorting-type="POSITION" />
+        <object-type name="TYPE ATTRIBUTE" sorting-type="POSITION" />
+      </sorting>
+      <default-editors>
+        <object-type name="VIEW" editor-type="SELECTION" />
+        <object-type name="PACKAGE" editor-type="SELECTION" />
+        <object-type name="TYPE" editor-type="SELECTION" />
+      </default-editors>
+    </browser-settings>
+    <navigation-settings>
+      <lookup-filters>
+        <lookup-objects>
+          <object-type name="SCHEMA" enabled="true" />
+          <object-type name="USER" enabled="false" />
+          <object-type name="ROLE" enabled="false" />
+          <object-type name="PRIVILEGE" enabled="false" />
+          <object-type name="CHARSET" enabled="false" />
+          <object-type name="TABLE" enabled="true" />
+          <object-type name="VIEW" enabled="true" />
+          <object-type name="MATERIALIZED VIEW" enabled="true" />
+          <object-type name="INDEX" enabled="true" />
+          <object-type name="CONSTRAINT" enabled="true" />
+          <object-type name="DATASET TRIGGER" enabled="true" />
+          <object-type name="DATABASE TRIGGER" enabled="true" />
+          <object-type name="SYNONYM" enabled="false" />
+          <object-type name="SEQUENCE" enabled="true" />
+          <object-type name="PROCEDURE" enabled="true" />
+          <object-type name="FUNCTION" enabled="true" />
+          <object-type name="PACKAGE" enabled="true" />
+          <object-type name="TYPE" enabled="true" />
+          <object-type name="DIMENSION" enabled="false" />
+          <object-type name="CLUSTER" enabled="false" />
+          <object-type name="DBLINK" enabled="true" />
+        </lookup-objects>
+        <force-database-load value="false" />
+        <prompt-connection-selection value="true" />
+        <prompt-schema-selection value="true" />
+      </lookup-filters>
+    </navigation-settings>
+    <dataset-grid-settings>
+      <general>
+        <enable-zooming value="true" />
+        <enable-column-tooltip value="true" />
+      </general>
+      <sorting>
+        <nulls-first value="true" />
+        <max-sorting-columns value="4" />
+      </sorting>
+      <audit-columns>
+        <column-names value="" />
+        <visible value="true" />
+        <editable value="false" />
+      </audit-columns>
+    </dataset-grid-settings>
+    <dataset-editor-settings>
+      <text-editor-popup>
+        <active value="false" />
+        <active-if-empty value="false" />
+        <data-length-threshold value="100" />
+        <popup-delay value="1000" />
+      </text-editor-popup>
+      <values-actions-popup>
+        <show-popup-button value="true" />
+        <element-count-threshold value="1000" />
+        <data-length-threshold value="250" />
+      </values-actions-popup>
+      <general>
+        <fetch-block-size value="100" />
+        <fetch-timeout value="30" />
+        <trim-whitespaces value="true" />
+        <convert-empty-strings-to-null value="true" />
+        <select-content-on-cell-edit value="true" />
+        <large-value-preview-active value="true" />
+      </general>
+      <filters>
+        <prompt-filter-dialog value="true" />
+        <default-filter-type value="BASIC" />
+      </filters>
+      <qualified-text-editor text-length-threshold="300">
+        <content-types>
+          <content-type name="Text" enabled="true" />
+          <content-type name="Properties" enabled="true" />
+          <content-type name="XML" enabled="true" />
+          <content-type name="DTD" enabled="true" />
+          <content-type name="HTML" enabled="true" />
+          <content-type name="XHTML" enabled="true" />
+          <content-type name="SQL" enabled="true" />
+          <content-type name="PL/SQL" enabled="true" />
+          <content-type name="JSON" enabled="true" />
+          <content-type name="JSON5" enabled="true" />
+          <content-type name="YAML" enabled="true" />
+        </content-types>
+      </qualified-text-editor>
+      <record-navigation>
+        <navigation-target value="VIEWER" />
+      </record-navigation>
+    </dataset-editor-settings>
+    <code-editor-settings>
+      <general>
+        <show-object-navigation-gutter value="false" />
+        <show-spec-declaration-navigation-gutter value="true" />
+        <enable-spellchecking value="true" />
+        <enable-reference-spellchecking value="false" />
+      </general>
+      <confirmations>
+        <save-changes value="false" />
+        <revert-changes value="true" />
+      </confirmations>
+    </code-editor-settings>
+    <code-completion-settings>
+      <filters>
+        <basic-filter>
+          <filter-element type="RESERVED_WORD" id="keyword" selected="true" />
+          <filter-element type="RESERVED_WORD" id="function" selected="true" />
+          <filter-element type="RESERVED_WORD" id="parameter" selected="true" />
+          <filter-element type="RESERVED_WORD" id="datatype" selected="true" />
+          <filter-element type="RESERVED_WORD" id="exception" selected="true" />
+          <filter-element type="OBJECT" id="schema" selected="true" />
+          <filter-element type="OBJECT" id="role" selected="true" />
+          <filter-element type="OBJECT" id="user" selected="true" />
+          <filter-element type="OBJECT" id="privilege" selected="true" />
+          <user-schema>
+            <filter-element type="OBJECT" id="table" selected="true" />
+            <filter-element type="OBJECT" id="view" selected="true" />
+            <filter-element type="OBJECT" id="materialized view" selected="true" />
+            <filter-element type="OBJECT" id="index" selected="true" />
+            <filter-element type="OBJECT" id="constraint" selected="true" />
+            <filter-element type="OBJECT" id="trigger" selected="true" />
+            <filter-element type="OBJECT" id="synonym" selected="false" />
+            <filter-element type="OBJECT" id="sequence" selected="true" />
+            <filter-element type="OBJECT" id="procedure" selected="true" />
+            <filter-element type="OBJECT" id="function" selected="true" />
+            <filter-element type="OBJECT" id="package" selected="true" />
+            <filter-element type="OBJECT" id="type" selected="true" />
+            <filter-element type="OBJECT" id="dimension" selected="true" />
+            <filter-element type="OBJECT" id="cluster" selected="true" />
+            <filter-element type="OBJECT" id="dblink" selected="true" />
+          </user-schema>
+          <public-schema>
+            <filter-element type="OBJECT" id="table" selected="false" />
+            <filter-element type="OBJECT" id="view" selected="false" />
+            <filter-element type="OBJECT" id="materialized view" selected="false" />
+            <filter-element type="OBJECT" id="index" selected="false" />
+            <filter-element type="OBJECT" id="constraint" selected="false" />
+            <filter-element type="OBJECT" id="trigger" selected="false" />
+            <filter-element type="OBJECT" id="synonym" selected="false" />
+            <filter-element type="OBJECT" id="sequence" selected="false" />
+            <filter-element type="OBJECT" id="procedure" selected="false" />
+            <filter-element type="OBJECT" id="function" selected="false" />
+            <filter-element type="OBJECT" id="package" selected="false" />
+            <filter-element type="OBJECT" id="type" selected="false" />
+            <filter-element type="OBJECT" id="dimension" selected="false" />
+            <filter-element type="OBJECT" id="cluster" selected="false" />
+            <filter-element type="OBJECT" id="dblink" selected="false" />
+          </public-schema>
+          <any-schema>
+            <filter-element type="OBJECT" id="table" selected="true" />
+            <filter-element type="OBJECT" id="view" selected="true" />
+            <filter-element type="OBJECT" id="materialized view" selected="true" />
+            <filter-element type="OBJECT" id="index" selected="true" />
+            <filter-element type="OBJECT" id="constraint" selected="true" />
+            <filter-element type="OBJECT" id="trigger" selected="true" />
+            <filter-element type="OBJECT" id="synonym" selected="true" />
+            <filter-element type="OBJECT" id="sequence" selected="true" />
+            <filter-element type="OBJECT" id="procedure" selected="true" />
+            <filter-element type="OBJECT" id="function" selected="true" />
+            <filter-element type="OBJECT" id="package" selected="true" />
+            <filter-element type="OBJECT" id="type" selected="true" />
+            <filter-element type="OBJECT" id="dimension" selected="true" />
+            <filter-element type="OBJECT" id="cluster" selected="true" />
+            <filter-element type="OBJECT" id="dblink" selected="true" />
+          </any-schema>
+        </basic-filter>
+        <extended-filter>
+          <filter-element type="RESERVED_WORD" id="keyword" selected="true" />
+          <filter-element type="RESERVED_WORD" id="function" selected="true" />
+          <filter-element type="RESERVED_WORD" id="parameter" selected="true" />
+          <filter-element type="RESERVED_WORD" id="datatype" selected="true" />
+          <filter-element type="RESERVED_WORD" id="exception" selected="true" />
+          <filter-element type="OBJECT" id="schema" selected="true" />
+          <filter-element type="OBJECT" id="user" selected="true" />
+          <filter-element type="OBJECT" id="role" selected="true" />
+          <filter-element type="OBJECT" id="privilege" selected="true" />
+          <user-schema>
+            <filter-element type="OBJECT" id="table" selected="true" />
+            <filter-element type="OBJECT" id="view" selected="true" />
+            <filter-element type="OBJECT" id="materialized view" selected="true" />
+            <filter-element type="OBJECT" id="index" selected="true" />
+            <filter-element type="OBJECT" id="constraint" selected="true" />
+            <filter-element type="OBJECT" id="trigger" selected="true" />
+            <filter-element type="OBJECT" id="synonym" selected="true" />
+            <filter-element type="OBJECT" id="sequence" selected="true" />
+            <filter-element type="OBJECT" id="procedure" selected="true" />
+            <filter-element type="OBJECT" id="function" selected="true" />
+            <filter-element type="OBJECT" id="package" selected="true" />
+            <filter-element type="OBJECT" id="type" selected="true" />
+            <filter-element type="OBJECT" id="dimension" selected="true" />
+            <filter-element type="OBJECT" id="cluster" selected="true" />
+            <filter-element type="OBJECT" id="dblink" selected="true" />
+          </user-schema>
+          <public-schema>
+            <filter-element type="OBJECT" id="table" selected="true" />
+            <filter-element type="OBJECT" id="view" selected="true" />
+            <filter-element type="OBJECT" id="materialized view" selected="true" />
+            <filter-element type="OBJECT" id="index" selected="true" />
+            <filter-element type="OBJECT" id="constraint" selected="true" />
+            <filter-element type="OBJECT" id="trigger" selected="true" />
+            <filter-element type="OBJECT" id="synonym" selected="true" />
+            <filter-element type="OBJECT" id="sequence" selected="true" />
+            <filter-element type="OBJECT" id="procedure" selected="true" />
+            <filter-element type="OBJECT" id="function" selected="true" />
+            <filter-element type="OBJECT" id="package" selected="true" />
+            <filter-element type="OBJECT" id="type" selected="true" />
+            <filter-element type="OBJECT" id="dimension" selected="true" />
+            <filter-element type="OBJECT" id="cluster" selected="true" />
+            <filter-element type="OBJECT" id="dblink" selected="true" />
+          </public-schema>
+          <any-schema>
+            <filter-element type="OBJECT" id="table" selected="true" />
+            <filter-element type="OBJECT" id="view" selected="true" />
+            <filter-element type="OBJECT" id="materialized view" selected="true" />
+            <filter-element type="OBJECT" id="index" selected="true" />
+            <filter-element type="OBJECT" id="constraint" selected="true" />
+            <filter-element type="OBJECT" id="trigger" selected="true" />
+            <filter-element type="OBJECT" id="synonym" selected="true" />
+            <filter-element type="OBJECT" id="sequence" selected="true" />
+            <filter-element type="OBJECT" id="procedure" selected="true" />
+            <filter-element type="OBJECT" id="function" selected="true" />
+            <filter-element type="OBJECT" id="package" selected="true" />
+            <filter-element type="OBJECT" id="type" selected="true" />
+            <filter-element type="OBJECT" id="dimension" selected="true" />
+            <filter-element type="OBJECT" id="cluster" selected="true" />
+            <filter-element type="OBJECT" id="dblink" selected="true" />
+          </any-schema>
+        </extended-filter>
+      </filters>
+      <sorting enabled="true">
+        <sorting-element type="RESERVED_WORD" id="keyword" />
+        <sorting-element type="RESERVED_WORD" id="datatype" />
+        <sorting-element type="OBJECT" id="column" />
+        <sorting-element type="OBJECT" id="table" />
+        <sorting-element type="OBJECT" id="view" />
+        <sorting-element type="OBJECT" id="materialized view" />
+        <sorting-element type="OBJECT" id="index" />
+        <sorting-element type="OBJECT" id="constraint" />
+        <sorting-element type="OBJECT" id="trigger" />
+        <sorting-element type="OBJECT" id="synonym" />
+        <sorting-element type="OBJECT" id="sequence" />
+        <sorting-element type="OBJECT" id="procedure" />
+        <sorting-element type="OBJECT" id="function" />
+        <sorting-element type="OBJECT" id="package" />
+        <sorting-element type="OBJECT" id="type" />
+        <sorting-element type="OBJECT" id="dimension" />
+        <sorting-element type="OBJECT" id="cluster" />
+        <sorting-element type="OBJECT" id="dblink" />
+        <sorting-element type="OBJECT" id="schema" />
+        <sorting-element type="OBJECT" id="role" />
+        <sorting-element type="OBJECT" id="user" />
+        <sorting-element type="RESERVED_WORD" id="function" />
+        <sorting-element type="RESERVED_WORD" id="parameter" />
+      </sorting>
+      <format>
+        <enforce-code-style-case value="true" />
+      </format>
+    </code-completion-settings>
+    <execution-engine-settings>
+      <statement-execution>
+        <fetch-block-size value="100" />
+        <execution-timeout value="20" />
+        <debug-execution-timeout value="600" />
+        <focus-result value="false" />
+        <prompt-execution value="false" />
+      </statement-execution>
+      <script-execution>
+        <command-line-interfaces />
+        <execution-timeout value="300" />
+      </script-execution>
+      <method-execution>
+        <execution-timeout value="30" />
+        <debug-execution-timeout value="600" />
+        <parameter-history-size value="10" />
+      </method-execution>
+    </execution-engine-settings>
+    <operation-settings>
+      <transactions>
+        <uncommitted-changes>
+          <on-project-close value="ASK" />
+          <on-disconnect value="ASK" />
+          <on-autocommit-toggle value="ASK" />
+        </uncommitted-changes>
+        <multiple-uncommitted-changes>
+          <on-commit value="ASK" />
+          <on-rollback value="ASK" />
+        </multiple-uncommitted-changes>
+      </transactions>
+      <session-browser>
+        <disconnect-session value="ASK" />
+        <kill-session value="ASK" />
+        <reload-on-filter-change value="false" />
+      </session-browser>
+      <compiler>
+        <compile-type value="KEEP" />
+        <compile-dependencies value="ASK" />
+        <always-show-controls value="false" />
+      </compiler>
+      <debugger>
+        <debugger-type value="JDBC" />
+        <use-generic-runners value="true" />
+      </debugger>
+    </operation-settings>
+    <ddl-file-settings>
+      <extensions>
+        <mapping file-type-id="VIEW" extensions="vw" />
+        <mapping file-type-id="TRIGGER" extensions="trg" />
+        <mapping file-type-id="PROCEDURE" extensions="prc" />
+        <mapping file-type-id="FUNCTION" extensions="fnc" />
+        <mapping file-type-id="PACKAGE" extensions="pkg" />
+        <mapping file-type-id="PACKAGE_SPEC" extensions="pks" />
+        <mapping file-type-id="PACKAGE_BODY" extensions="pkb" />
+        <mapping file-type-id="TYPE" extensions="tpe" />
+        <mapping file-type-id="TYPE_SPEC" extensions="tps" />
+        <mapping file-type-id="TYPE_BODY" extensions="tpb" />
+      </extensions>
+      <general>
+        <lookup-ddl-files value="true" />
+        <create-ddl-files value="false" />
+        <synchronize-ddl-files value="true" />
+        <use-qualified-names value="false" />
+        <make-scripts-rerunnable value="true" />
+      </general>
+    </ddl-file-settings>
+    <general-settings>
+      <regional-settings>
+        <date-format value="MEDIUM" />
+        <number-format value="UNGROUPED" />
+        <locale value="SYSTEM_DEFAULT" />
+        <use-custom-formats value="false" />
+      </regional-settings>
+      <environment>
+        <environment-types>
+          <environment-type id="development" name="Development" description="Development environment" color="-2430209/-12296320" readonly-code="false" readonly-data="false" />
+          <environment-type id="integration" name="Integration" description="Integration environment" color="-2621494/-12163514" readonly-code="true" readonly-data="false" />
+          <environment-type id="production" name="Production" description="Productive environment" color="-11574/-10271420" readonly-code="true" readonly-data="true" />
+          <environment-type id="other" name="Other" description="" color="-1576/-10724543" readonly-code="false" readonly-data="false" />
+        </environment-types>
+        <visibility-settings>
+          <connection-tabs value="true" />
+          <dialog-headers value="true" />
+          <object-editor-tabs value="true" />
+          <script-editor-tabs value="false" />
+          <execution-result-tabs value="true" />
+        </visibility-settings>
+      </environment>
+    </general-settings>
+  </component>
+  <component name="DBNavigator.Project.StatementExecutionManager">
+    <execution-variables />
+  </component>
+</project>
