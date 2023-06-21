@@ -1,8 +1,8 @@
-
-# ---------------------------------- DARBAS SU FAILAIS-----------------------------------
 #
-# Darbas su failais naudijant open funkcija:
-#
+# # ---------------------------------- DARBAS SU FAILAIS-----------------------------------
+# #
+# # Darbas su failais naudijant open funkcija:
+# #
 #                                                                    #"a" - append
 # file = open("failopavadinimas.txt", "a", encoding="utf8")                          #"r" - read - nuskaito, "w" - write - paraso
 # content = file.write("Tekstas naujame faile, kuriame išbandome open funkcija")
@@ -10,7 +10,7 @@
 #
 # file = open("failopavadinimas.txt", "a", encoding="utf8")                          #"r" - read - nuskaito, "w" - write - paraso
 # file.write("Tekstas naujame faile, kuriame išbandome open funkcija")      #encoding - supranta ltu raides
-# file.close(                                                              #uzdaro faila, ty baigia veiksma
+# file.close()                                                             #uzdaro faila, ty baigia veiksma
 #
 #
 # with open("failopavadinimas.txt", "w", encoding="utf8") as file:     #tinkamai atidaro ir uzdaro failus, nedubliuoja teksto
@@ -42,4 +42,4 @@
 #         print("Duomenys irasyti")
 # except:
 #     print("Tu dar nesimokai!")
-
+#
