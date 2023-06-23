@@ -12,7 +12,7 @@ def create_and_insert_product():
         port=5432,
         database="products",
         user="postgres",
-        password="tirlipirli"
+        password="**********"
     )
 
     # creating managment with database
