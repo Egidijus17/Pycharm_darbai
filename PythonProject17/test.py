@@ -10,8 +10,8 @@
 #         self.marke = marke
 #         self.metai = metai
 #     def display_info(self):
-#         print(f"Automobilio marke yra {self.marke}")
-#         print((f"Automobilio metai yra {self.metai}"))
+#         print(f"Automobilio marke yra: {self.marke}")
+#         print((f"Automobilio metai yra: {self.metai}"))
 #
 # class ElektrinisAutomobilis(Automobilis):
 #
@@ -20,7 +20,7 @@
 #         self.baterijos_talpa = baterijos_talpa
 #     def display_info(self):
 #         super().display_info()
-#         print(f"Baterijos talpa yra {self.baterijos_talpa}")
+#         print(f"Baterijos talpa yra: {self.baterijos_talpa}")
 #
 # automobilis = Automobilis("Audi", 2020)
 # Elektromobilis = ElektrinisAutomobilis("Tesla", 2022, 88)
